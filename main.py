@@ -10,7 +10,7 @@ from pynput import keyboard
 타이머_시작됨 = False
 타이머_종료시간 = None
 소리_파일 = r"sound.mp3"
-타이머_시간 = 3
+타이머_시간 = 55 # 설치기 알람 시간에 맞춰서 수정하시면 됩니다 기본값 : 55초
 
 # pygame 초기화
 pygame.mixer.init(frequency=44100, size=-16, channels=2, buffer=512)

@@ -34,7 +34,7 @@ def alarm():
 # 타이머를 시작하는 함수
 def start_timer():
     global alarm_active, timer_started, timer_end_time
-    print("58초 타이머 시작")
+    print(f"{timer_time}초 타이머 시작")
     timer_started = True
     timer_end_time = time.time() + timer_time
     time.sleep(timer_time)  # timer_time초 대기

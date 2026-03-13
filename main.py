@@ -10,7 +10,7 @@ from pynput import keyboard
 타이머_시작됨 = False
 타이머_종료시간 = None
 소리_파일 = r"sound.mp3"
-타이머_시간 = 55 # 설치기 알람 시간에 맞춰서 수정하시면 됩니다 기본값 : 55초
+타이머_시간 = 54 # 설치기 알람 시간에 맞춰서 수정하시면 됩니다 기본값 : 55초
 
 # pygame 초기화
 pygame.mixer.init(frequency=44100, size=-16, channels=2, buffer=512)
@@ -65,9 +65,9 @@ def 타이머_실행():
 def 알람_토글():
     global 알람_활성
 
-    current_time = time.time()
+    현재_시간 = time.time()
 
-    if 타이머_시작됨 and current_time < 타이머_종료시간:
+    if 타이머_시작됨 and 현재_시간 < 타이머_종료시간:
         print("타이머가 끝나기 전에는 알람 설정을 변경할 수 없습니다.")
         return
 

@@ -9,16 +9,19 @@ from pynput import keyboard
 알람_울리는중 = False
 타이머_시작됨 = False
 타이머_종료시간 = None
-소리_파일 = r"sound.mp3"
-타이머_시간 = 54 # 설치기 알람 시간에 맞춰서 수정하시면 됩니다 기본값 : 55초
+소리_파일 = r"sound.mp3" # 사운드 파일이 있어야 정상적으로 실행됩니다.
+타이머_시간 = 54 # 설치기 알람 시간에 맞춰서 수정하시면 됩니다. 기본값 : 54초
+키_입력 = 'z' # 설치기가 있는 키를 입력해주세요 Z 키가 설치기이면 z라고 입력하시면 됩니다.
 
 # pygame 초기화
 pygame.mixer.init(frequency=44100, size=-16, channels=2, buffer=512)
 
+# 소리 재생
 def 소리_재생(file):
     pygame.mixer.music.load(file)
     pygame.mixer.music.play(-1)
 
+# 소리 정지
 def 소리_정지():
     pygame.mixer.music.stop()
 
@@ -88,11 +91,11 @@ def 알람_토글():
 # 키 입력 감지
 def 키_눌림(키):
     try:
-        if 키 == keyboard.KeyCode.from_char('z'):
+        if 키 == keyboard.KeyCode.from_char(키_입력):
             알람_토글()
     except Exception as e:
         print(f"키 입력 처리 중 에러 발생: {e}")
 
 # 키보드 리스너 실행
-with keyboard.Listener(on_press=키_눌림) as listener:
-    listener.join()
+with keyboard.Listener(on_press=키_눌림) as 리스너:
+    리스너.join()

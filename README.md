@@ -1,10 +1,10 @@
 # 메이플스토리 타이머 (제작자 : Laytally)
 
-## 디스코드
-https://discord.gg/6ysVFJ6umJ
-
 메이플스토리 설치기 타이밍을 맞추기 위한 간단한 알람 프로그램입니다.
 지정된 시간이 지나면 알람 소리가 반복 재생됩니다.
+
+## 디스코드
+https://discord.gg/6ysVFJ6umJ
 
 ## 실행 방법
 Python 3.11.9 버전과 vscode를 설치하시고 

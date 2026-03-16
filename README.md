@@ -34,7 +34,7 @@ sound.mp3
 3. 프로그램 실행
 
 ```
-python py.py
+python main.py
 ```
 
 ## 조작 키
@@ -57,7 +57,7 @@ python py.py
 
 ```
 project/
- ├ py.py
+ ├ main.py
  ├ sound.mp3
  └ README.md
 ```
